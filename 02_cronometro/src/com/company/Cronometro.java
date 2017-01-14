@@ -7,8 +7,12 @@ public class Cronometro {
 
     public void tiempoTranscurrido() {
 
-        long intervalo = System.nanoTime() - horaInicio;
+        double intervalo = (System.nanoTime() - horaInicio) /1000000000.0;
+
+        System.out.println(intervalo);
 
     }
+
+
 
 }

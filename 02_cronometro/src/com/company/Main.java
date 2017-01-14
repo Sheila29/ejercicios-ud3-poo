@@ -21,6 +21,7 @@ public class Main {
             System.out.println("2.Consultar cronómetro");
             System.out.println("3.Salir");
 
+            System.out.print("Opción: ");
             opcion = Integer.parseInt(br.readLine());
 
             switch (opcion) {
@@ -43,4 +44,4 @@ public class Main {
 
     }
     }
-}
+
