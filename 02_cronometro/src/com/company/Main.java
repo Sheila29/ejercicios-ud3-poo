@@ -26,7 +26,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    if (numCronometros < 10) {
+                    if (numCronometros < 9) {
                         cs[numCronometros] = new Cronometro();
                         numCronometros++;
                     }
@@ -36,6 +36,13 @@ public class Main {
                         cs[i].tiempoTranscurrido();
 
                     }
+
+
+                    /*
+                    if (c[n] != null) {
+                        c[n].tiempoTranscurrido();
+                        }
+                     */
                     break;
 
             }
