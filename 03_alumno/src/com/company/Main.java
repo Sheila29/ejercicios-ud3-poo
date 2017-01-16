@@ -10,9 +10,9 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Alumno[] alumnos = new Alumno[5];
+        Alumno[] alumnos = new Alumno[2];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < alumnos.length; i++) {
 
             alumnos[i] = new Alumno();
 
@@ -31,12 +31,9 @@ public class Main {
 
         }
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < alumnos.length; i++) {
 
-            System.out.println("Nombre: "+alumnos[i].getNombre());
-            System.out.println("Apellidos: "+alumnos[i].getApellidos());
-            System.out.println("DNI: "+alumnos[i].getDNI());
-            System.out.println("Teléfono: "+alumnos[i].getTelefono());
+            System.out.println(alumnos[i].toString());
 
         }
 

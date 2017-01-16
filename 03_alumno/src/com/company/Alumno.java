@@ -8,6 +8,29 @@ public class Alumno {
     private String DNI;
     private String telefono;
 
+    public Alumno(){
+
+    }
+
+    public Alumno(String nombre, String apellidos, String DNI, String telefono){
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.DNI = DNI;
+        this.telefono = telefono;
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "nombre: " + nombre + '\'' +
+                ", apellidos: " + apellidos + '\'' +
+                ", DNI: " + DNI + '\'' +
+                ", telefono: " + telefono + '\'' +
+                '}';
+    }
+
     public String getNombre() {
         return nombre;
     }
