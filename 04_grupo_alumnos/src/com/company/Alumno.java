@@ -8,6 +8,8 @@ public class Alumno {
      private String DNI;
      private String telefono;
 
+    private Grupo grupo = null;
+
 
     public String getNombre() {
         return nombre;
@@ -39,5 +41,13 @@ public class Alumno {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
     }
 }
