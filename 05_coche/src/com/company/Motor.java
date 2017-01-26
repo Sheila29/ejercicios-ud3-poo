@@ -7,6 +7,8 @@ public class Motor {
     private String combustible;
     private int potencia;
 
+    private Coche coche = null;
+
 
     public int getCilindrada() {
         return cilindrada;
@@ -33,6 +35,13 @@ public class Motor {
     }
 
 
+    public Coche getCoche() {
+        return coche;
+    }
+
+    public void setCoche(Coche coche) {
+        this.coche = coche;
+    }
 }
 
 

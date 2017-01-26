@@ -45,6 +45,10 @@ public class Main {
         p.setElevalunasElectrico(true);
 
 
+        c.addMotor(m);
+        c.addRueda(r);
+        c.addPuerta(p);
+
 
 
 
