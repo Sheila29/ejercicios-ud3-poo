@@ -14,21 +14,39 @@ public class Coche {
     private int numRuedas = 0;
 
     public void addMotor(Motor m){
-        motores[numMotores] = m ;
-        numMotores++;
+
+        if (numMotores < 10) {
+            motores[numMotores] = m;
+            m.setCoche(this);
+            numMotores++;
+        }
     }
 
     public void addPuerta(Puerta p){
-        puertas[numPuertas] = p;
-        numPuertas++;
+
+        if(numPuertas < 5) {
+            puertas[numPuertas] = p;
+            p.setCoche(this);
+            numPuertas++;
+        }
     }
 
     public void addRueda(Rueda r){
-        ruedas[numRuedas] = r;
-        numRuedas++;
+
+        if(numRuedas < 4) {
+            ruedas[numRuedas] = r;
+            r.setCoche(this);
+            numRuedas++;
+        }
     }
 
-    public Coche() {
+    public Coche(String marca, String modelo, int color) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+    }
+
+    /*public Coche() {
 
         getMotores()[0] = new Motor();
 
@@ -41,6 +59,7 @@ public class Coche {
 
         }
     }
+    */
 
 
     public String getMarca() {
@@ -89,5 +108,15 @@ public class Coche {
 
     public void setRuedas(Rueda[] ruedas) {
         this.ruedas = ruedas;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Coche{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", color=" + color +
+                '}';
     }
 }

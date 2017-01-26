@@ -7,6 +7,10 @@ public class Puerta {
 
     private Coche coche = null;
 
+    public Puerta(boolean elevalunasElectrico) {
+        this.setElevalunasElectrico(elevalunasElectrico);
+    }
+
     public boolean isElevalunasElectrico() {
         return elevalunasElectrico;
     }
@@ -21,6 +25,13 @@ public class Puerta {
 
     public void setCoche(Coche coche) {
         this.coche = coche;
+    }
+
+    @Override
+    public String toString() {
+        return "Puerta{" +
+                "elevalunasElectrico=" + elevalunasElectrico +
+                '}';
     }
 }
 

@@ -9,6 +9,11 @@ public class Motor {
 
     private Coche coche = null;
 
+    public Motor(int cilindrada, String combustible, int potencia) {
+        this.cilindrada = cilindrada;
+        this.combustible = combustible;
+        this.potencia = potencia;
+    }
 
     public int getCilindrada() {
         return cilindrada;
@@ -41,6 +46,15 @@ public class Motor {
 
     public void setCoche(Coche coche) {
         this.coche = coche;
+    }
+
+    @Override
+    public String toString() {
+        return "Motor{" +
+                "cilindrada=" + cilindrada +
+                ", combustible='" + combustible + '\'' +
+                ", potencia=" + potencia +
+                '}';
     }
 }
 

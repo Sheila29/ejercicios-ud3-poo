@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,44 +12,71 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Bienvenido a la página de diseño de su futuro coche, por favor,diseñe su coche");
+        System.out.println("COCHE");
+        System.out.println("------------");
 
-        Coche c = new Coche();
-        System.out.println("Marca");
-        c.setMarca("Opel");
-        System.out.println("Modelo");
-        c.setModelo("Corsa");
-        System.out.println("Color");
-        c.setColor(64);
+        System.out.println("Marca: ");
+        String marca = br.readLine();
 
-        c.setMarca(br.readLine());
+        System.out.println("Modelo: ");
+        String modelo = br.readLine();
 
-        Motor m = new Motor();
+        System.out.println("Color: ");
+        int color = Integer.parseInt(br.readLine());
 
-        System.out.println("Gracias ha pinchado en la sección del motor: ");
-        System.out.println("Cilindrada");
-        m.setCilindrada(200);
-        System.out.println("Combustible");
-        m.setCombustible("Gasolina");
-        System.out.println("Potencia");
-        m.setPotencia(200);
+        Coche c = new Coche(marca,modelo,color);
 
-        Rueda r = new Rueda();
 
-        System.out.println("Gracias ha pinchado en la sección de rueda: ");
-        System.out.println("Diametro");
-        r.setDiametro("320");
+        System.out.println("MOTOR");
+        System.out.println("------------");
+        System.out.println("Cilindrada: ");
+        int cilindrada = Integer.parseInt(br.readLine());
 
-        Puerta p = new Puerta();
+        System.out.println("Combustible: ");
+        String combustible = br.readLine();
 
-        System.out.println("Gracias ha pinchado en la sección de puerta: ");
-        System.out.println("Elevalunas electrico s/n");
-        p.setElevalunasElectrico(true);
 
+        System.out.println("Potencia: ");
+        int potencia = Integer.parseInt(br.readLine());
+
+        Motor m = new Motor(cilindrada,combustible,potencia);
 
         c.addMotor(m);
-        c.addRueda(r);
-        c.addPuerta(p);
+
+
+        System.out.println("RUEDA");
+        System.out.println("------------");
+        Rueda r = new Rueda("320");
+
+        System.out.println("PUERTA");
+        System.out.println("------------");
+
+        boolean añadirMas;
+        int recuento = 0;
+        do{
+            System.out.println("¿elevalunas eléctrico s/n?:");
+            boolean elevalunas = br.readLine().equalsIgnoreCase("S");// DEVUELVE TRUE
+
+            Puerta p = new Puerta(elevalunas);
+
+            c.addPuerta(p);
+
+
+
+            System.out.println("¿Quieres añadir más puertas s/n?:");
+            añadirMas = br.readLine().equalsIgnoreCase("S");
+            recuento++;
+
+
+
+
+
+        }while((añadirMas  && recuento < 5) || (recuento < 2));
+
+
+
+
+
 
 
 

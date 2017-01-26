@@ -7,6 +7,10 @@ public class Rueda {
 
     private Coche coche = null;
 
+    public Rueda(String diametro) {
+        this.diametro = diametro;
+    }
+
     public String getDiametro() {
         return diametro;
     }
@@ -22,5 +26,12 @@ public class Rueda {
 
     public void setCoche(Coche coche) {
         this.coche = coche;
+    }
+
+    @Override
+    public String toString() {
+        return "Rueda{" +
+                "diametro='" + diametro + '\'' +
+                '}';
     }
 }
