@@ -9,10 +9,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Bienvenido a la página de diseño de su futuro coche, por favor,diseñe su coche");
+
         Coche c = new Coche();
-
-
-        System.out.println("Bienvenido a la página de diseño de su futuro coche, por favor, elija entre las siguientes opciones");
         System.out.println("Marca");
         c.setMarca("Opel");
         System.out.println("Modelo");
@@ -34,8 +34,17 @@ public class Main {
 
         Rueda r = new Rueda();
 
-        System.out.println("Rueda");
-        r.setDiametro("");
+        System.out.println("Gracias ha pinchado en la sección de rueda: ");
+        System.out.println("Diametro");
+        r.setDiametro("320");
+
+        Puerta p = new Puerta();
+
+        System.out.println("Gracias ha pinchado en la sección de puerta: ");
+        System.out.println("Elevalunas electrico s/n");
+        p.setElevalunasElectrico(true);
+
+
 
 
 

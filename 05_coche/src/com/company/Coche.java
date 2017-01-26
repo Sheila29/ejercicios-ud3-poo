@@ -7,19 +7,37 @@ public class Coche {
     private int color;
 
     private Motor[] motores = new Motor[10];
+    private int numMotores = 0;
     private Puerta[] puertas = new Puerta[5];
+    private int numPuertas = 0;
     private Rueda[] ruedas = new Rueda[4];
+    private int numRuedas = 0;
 
-    public Coche(){
+    public void addMotor(Motor m){
+        motores[numMotores] = m ;
+        numMotores++;
+    }
 
-        motores [0] = new Motor();
+    public void addPuerta(Puerta p){
+        puertas[numPuertas] = p;
+        numPuertas++;
+    }
+
+    public void addRueda(Rueda r){
+        ruedas[numRuedas] = r;
+        numRuedas++;
+    }
+
+    public Coche() {
+
+        getMotores()[0] = new Motor();
 
         for (int i = 0; i < 4; i++) {
-            ruedas[i] = new Rueda();
+            getRuedas()[i] = new Rueda();
         }
 
         for (int i = 0; i < 2; i++) {
-            puertas[i] = new Puerta();
+            getPuertas()[i] = new Puerta();
 
         }
     }
@@ -47,5 +65,29 @@ public class Coche {
 
     public void setColor(int color) {
         this.color = color;
+    }
+
+    public Motor[] getMotores() {
+        return motores;
+    }
+
+    public void setMotores(Motor[] motores) {
+        this.motores = motores;
+    }
+
+    public Puerta[] getPuertas() {
+        return puertas;
+    }
+
+    public void setPuertas(Puerta[] puertas) {
+        this.puertas = puertas;
+    }
+
+    public Rueda[] getRuedas() {
+        return ruedas;
+    }
+
+    public void setRuedas(Rueda[] ruedas) {
+        this.ruedas = ruedas;
     }
 }

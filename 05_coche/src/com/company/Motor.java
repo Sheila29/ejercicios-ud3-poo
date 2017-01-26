@@ -7,6 +7,7 @@ public class Motor {
     private String combustible;
     private int potencia;
 
+
     public int getCilindrada() {
         return cilindrada;
     }
