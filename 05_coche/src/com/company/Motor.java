@@ -47,6 +47,7 @@ public class Motor {
     public void setCoche(Coche coche) {
         this.coche = coche;
     }
+<<<<<<< Updated upstream
 
     @Override
     public String toString() {
@@ -56,6 +57,8 @@ public class Motor {
                 ", potencia=" + potencia +
                 '}';
     }
+=======
+>>>>>>> Stashed changes
 }
 
 

@@ -14,6 +14,7 @@ public class Coche {
     private int numRuedas = 0;
 
     public void addMotor(Motor m){
+<<<<<<< Updated upstream
 
         if (numMotores < 10) {
             motores[numMotores] = m;
@@ -49,18 +50,40 @@ public class Coche {
     /*public Coche() {
 
         getMotores()[0] = new Motor();
+=======
 
-        for (int i = 0; i < 4; i++) {
-            getRuedas()[i] = new Rueda();
+        if( numMotores < 10) {
+            motores[numMotores] = m;
+            m.setCoche(this);
+            numMotores++;
         }
+    }
 
-        for (int i = 0; i < 2; i++) {
-            getPuertas()[i] = new Puerta();
+    public void addPuerta(Puerta p){
+>>>>>>> Stashed changes
 
+        if( numPuertas < 5) {
+            puertas[numPuertas] = p;
+            p.setCoche(this);
+            numPuertas++;
+        }
+    }
+
+    public void addRueda(Rueda r){
+
+        if( numRuedas < 4) {
+            ruedas[numRuedas] = r;
+            r.setCoche(this);
+            numRuedas++;
         }
     }
     */
 
+    public Coche(String marca, String modelo, int color) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+    }
 
     public String getMarca() {
         return marca;
@@ -110,7 +133,10 @@ public class Coche {
         this.ruedas = ruedas;
     }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     @Override
     public String toString() {
         return "Coche{" +

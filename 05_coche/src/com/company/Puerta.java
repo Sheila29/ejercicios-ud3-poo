@@ -8,7 +8,11 @@ public class Puerta {
     private Coche coche = null;
 
     public Puerta(boolean elevalunasElectrico) {
+<<<<<<< Updated upstream
         this.setElevalunasElectrico(elevalunasElectrico);
+=======
+        this.elevalunasElectrico = elevalunasElectrico;
+>>>>>>> Stashed changes
     }
 
     public boolean isElevalunasElectrico() {
@@ -26,6 +30,7 @@ public class Puerta {
     public void setCoche(Coche coche) {
         this.coche = coche;
     }
+<<<<<<< Updated upstream
 
     @Override
     public String toString() {
@@ -33,5 +38,7 @@ public class Puerta {
                 "elevalunasElectrico=" + elevalunasElectrico +
                 '}';
     }
+=======
+>>>>>>> Stashed changes
 }
 

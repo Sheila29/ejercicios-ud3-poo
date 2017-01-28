@@ -19,7 +19,10 @@ public class Rueda {
         this.diametro = diametro;
     }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     public Coche getCoche() {
         return coche;
     }
@@ -27,6 +30,7 @@ public class Rueda {
     public void setCoche(Coche coche) {
         this.coche = coche;
     }
+<<<<<<< Updated upstream
 
     @Override
     public String toString() {
@@ -34,4 +38,6 @@ public class Rueda {
                 "diametro='" + diametro + '\'' +
                 '}';
     }
+=======
+>>>>>>> Stashed changes
 }
